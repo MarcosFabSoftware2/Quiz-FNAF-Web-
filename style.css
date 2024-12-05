@@ -1,13 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/five-nights-at-freddys');
+                
 body {
     background-image: url(https://images4.alphacoders.com/135/thumb-1920-1359391.png);
     background-attachment: fixed;
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Five Nights At Freddys', sans-serif;
     text-align: center;
 }
 
 h1, h2 {
-    color: #ffcc00;
+    color: white;
 }
 
 .container {
@@ -16,13 +18,11 @@ h1, h2 {
 }
 
 .middle {
-    width: 100%;
+    width: 50%;
     text-align: center;
-}
-
-.middle h1 {
-    font-family: "Inter", sans-serif;
-    color: #fff;
+    background-color: rgb(0, 0, 0, 0.600);
+    border: solid 2px rgb(63, 63, 63);
+    margin: 0 auto;
 }
 
 .middle input[type="radio"] {
@@ -30,7 +30,7 @@ h1, h2 {
 }
 
 .middle input[type="radio"]:checked + .box {
-    background-color: #007e90;
+    border:#a00dc7 solid 10px;
 }
 
 .middle .box {
@@ -46,6 +46,50 @@ h1, h2 {
     font-family: "Inter", sans-serif;
     font-weight: 900;
     margin: 20px;
+}
+
+.middle .freddy {
+    background: url(Freddy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.middle .chica {
+    background: url(Chica.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.middle .foxy {
+    background: url(Foxy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.middle .bonnie {
+    background: url(Bonnie.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.middle .bonnieTexto{
+    color: rgb(255, 0, 255);
+}
+
+.middle .freddyTexto{
+    color: #964b00;
+}
+
+.middle .foxyTexto {
+    color: red;
+}
+
+.middle .chicaTexto {
+    color: yellow;
 }
 
 .middle .box:active {
@@ -100,8 +144,6 @@ h1, h2 {
     font-family: FontAwesome;
     color: yellow;
 }
-
-.front-end
 
 button {
     background-color: #ff0000;
