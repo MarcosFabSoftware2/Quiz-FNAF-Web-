@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonnie</title>
+</head>
+<body>
+    <h1>Seu resultado é: Bonnie</h1>
+    <h1 id="votos"></h1>
+    <img src="https://i.gifer.com/WnES.gif" alt="">
+
+    <script>
+        let contBonnie = localStorage.getItem("bonnie")
+        document.querySelector("#votos").innerHTML = "Votos: " + contBonnie
+    </script>
+</body>
+</html>
