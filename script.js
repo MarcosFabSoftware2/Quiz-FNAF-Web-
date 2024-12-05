@@ -49,7 +49,7 @@ function Maior() {
     } else if (contFoxy === maior) {
         pagina = "foxy";
     }
-
+    
     return pagina;
 }
 

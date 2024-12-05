@@ -12,25 +12,39 @@ h1, h2 {
     color: white;
 }
 
-.container {
+.container2 {
     display: flex;
     justify-content: center;
 }
 
 .middle {
-    width: 50%;
+    width: 100vw;
     text-align: center;
     background-color: rgb(0, 0, 0, 0.600);
-    border: solid 2px rgb(63, 63, 63);
-    margin: 0 auto;
 }
 
 .middle input[type="radio"] {
     display: none;
 }
 
-.middle input[type="radio"]:checked + .box {
+.middle input[type="radio"]:checked + .freddy {
+    border:#964b00 solid 10px;
+    border-radius: 50px;
+}
+
+.middle input[type="radio"]:checked + .bonnie {
     border:#a00dc7 solid 10px;
+    border-radius: 50px;
+}
+
+.middle input[type="radio"]:checked + .foxy {
+    border:red solid 10px;
+    border-radius: 50px;
+}
+
+.middle input[type="radio"]:checked + .chica {
+    border:yellow solid 10px;
+    border-radius: 50px;
 }
 
 .middle .box {
@@ -49,47 +63,54 @@ h1, h2 {
 }
 
 .middle .freddy {
-    background: url(Freddy.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-
-.middle .chica {
-    background: url(Chica.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-
-.middle .foxy {
-    background: url(Foxy.png);
+    background: url(imagem/Freddy.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
 }
 
 .middle .bonnie {
-    background: url(Bonnie.png);
+    background: url(imagem/Bonnie.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
 }
 
-.middle .bonnieTexto{
-    color: rgb(255, 0, 255);
+.middle .foxy {
+    background: url(imagem/Foxy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
+
+.middle .chica {
+    background: url(imagem/Chica.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
 
 .middle .freddyTexto{
     color: #964b00;
+    margin-bottom: 5em;
 }
+
+
+.middle .bonnieTexto{
+    color: rgb(255, 0, 255);
+    margin-bottom: 5em;
+}
+
 
 .middle .foxyTexto {
     color: red;
+    margin-bottom: 5em;
 }
 
 .middle .chicaTexto {
     color: yellow;
+    margin-bottom: 5em;
 }
 
 .middle .box:active {
@@ -167,4 +188,10 @@ label {
 #resultado {
     margin-top: 20px;
     font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+    }
 }
