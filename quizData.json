@@ -1,0 +1,42 @@
+[
+    {
+        "pergunta": "Qual a cor do seu animatrônico favorito?",
+        "respostas": ["Bonnie", "Foxy", "Freddy", "Chica"]
+    },
+    {
+        "pergunta": "Qual é a habilidade do seu animatrônico favorito?",
+        "respostas": ["Chica", "Freddy", "Bonnie", "Foxy"]
+    },
+    {
+        "pergunta": "Qual é o seu acessório favorito?",
+        "respostas": ["Foxy", "Freddy", "Bonnie", "Chica"]
+    },
+    {
+        "pergunta": "Qual é o seu lugar favorito no restaurante?",
+        "respostas": ["Freddy", "Chica", "Bonnie", "Foxy"]
+    },
+    {
+        "pergunta": "Qual é a sua expressão favorita?",
+        "respostas": ["Bonnie", "Foxy", "Freddy", "Chica"]
+    },
+    {
+        "pergunta": "Qual é o seu comportamento favorito?",
+        "respostas": ["Chica", "Freddy", "Bonnie", "Foxy"]
+    },
+    {
+        "pergunta": "Qual é o seu momento favorito?",
+        "respostas": ["Foxy", "Bonnie", "Freddy", "Chica"]
+    },
+    {
+        "pergunta": "Qual é a sua comida favorita?",
+        "respostas": ["Chica", "Freddy", "Bonnie", "Foxy"]
+    },
+    {
+        "pergunta": "Qual é o seu medo?",
+        "respostas": ["Bonnie", "Chica", "Freddy", "Foxy"]
+    },
+    {
+        "pergunta": "Qual é o seu tipo de música favorita?",
+        "respostas": ["Chica", "Foxy", "Freddy", "Bonnie"]
+    }
+]
