@@ -2,8 +2,9 @@ let contFreddy = 0;
 let contBonnie = 0;
 let contChica = 0;
 let contFoxy = 0;
-let totalRespostas = 0; // Nova variável para armazenar o total de respostas
-let indiceAtual = 0; // Variável para armazenar o índice da pergunta atual
+
+let totalRespostas = 0;
+let indiceAtual = 0;
 
 function criarElemento(tag, classes = [], atributos = {}) {
     let elemento = document.createElement(tag);
@@ -24,11 +25,11 @@ async function carregarQuizData() {
 
 function gerarQuiz(quizData) {
     let quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = ''; // Limpa o conteúdo anterior
+    quizContainer.innerHTML = '';
 
-    let item = quizData[indiceAtual]; // Obtém a pergunta atual
+    let item = quizData[indiceAtual];
     let container1 = criarElemento('div', ['container1']);
-
+    let containerRespostas = criarElemento('div', ['containerRespostas']);
     let pergunta = criarElemento('h2', [], {});
     pergunta.textContent = item.pergunta;
 
@@ -46,33 +47,36 @@ function gerarQuiz(quizData) {
         label.appendChild(h2Texto);
         container2.appendChild(label);
     });
+    container1.appendChild(containerRespostas)
+    containerRespostas.appendChild(pergunta);
+    containerRespostas.appendChild(container2);
+    quizContainer.appendChild(containerRespostas);
 
-    container1.appendChild(pergunta);
-    container1.appendChild(container2);
-    quizContainer.appendChild(container1);
+    let containerBotaoAvancar = criarElemento('div', ['containerAvancarButton', 'containerBotaoAvancar']);
 
-    // Criar e adicionar o botão "Avançar"
-    let botaoAvancar = criarElemento('button', ['avancar-button'], { id: 'botao-avancar' });
+    let botaoAvancar = criarElemento('button', ['avancarButton'], { id: 'botao-avancar' });
     botaoAvancar.textContent = 'Avançar';
     botaoAvancar.addEventListener('click', () => {
         if (indiceAtual < quizData.length - 1) {
-            contagem(); // Contar as respostas antes de mudar a pergunta
-            indiceAtual++; // Avança para a próxima pergunta
-            gerarQuiz(quizData); // Gera a próxima pergunta
+            contagem();
+            indiceAtual++;
+            gerarQuiz(quizData);
         } else {
-            contagem(); // Contar as respostas na última pergunta
-            resultado(); // Calcula os resultados
-            exibirResultado(); // Exibe o resultado
+            contagem()
+            resultado();
+            exibirResultado();
+            redirecionamento();
         }
     });
-    quizContainer.appendChild(botaoAvancar);
+    quizContainer.appendChild(containerBotaoAvancar)
+    containerBotaoAvancar.appendChild(botaoAvancar)
 }
 
 function contagem() {
     let radios = document.querySelectorAll("input[type='radio']");
     radios.forEach(element => {
         if (element.checked) {
-            totalRespostas++; // Aumenta o total de respostas sempre que uma é selecionada
+            totalRespostas++;
             if (element.value === "freddy") {
                 contFreddy++;
             } else if (element.value === "bonnie") {
@@ -87,13 +91,11 @@ function contagem() {
 }
 
 function resultado() {
-    // Calcular porcentagens
     let percFreddy = (contFreddy / totalRespostas) * 100;
     let percBonnie = (contBonnie / totalRespostas) * 100;
     let percChica = (contChica / totalRespostas) * 100;
     let percFoxy = (contFoxy / totalRespostas) * 100;
 
-    // Salvar as porcentagens no localStorage
     localStorage.setItem("freddy", percFreddy);
     localStorage.setItem("bonnie", percBonnie);
     localStorage.setItem("chica", percChica);
@@ -102,17 +104,25 @@ function resultado() {
 
 function exibirResultado() {
     let quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = ''; // Limpa o conteúdo anterior
+    quizContainer.innerHTML = '';
+    
+    let freddy = localStorage.getItem("freddy")
+    let bonnie = localStorage.getItem("bonnie")
+    let chica = localStorage.getItem("chica")
+    let foxy = localStorage.getItem("foxy")
 
     let resultadoDiv = criarElemento('div', ['resultado']);
+    let resultadoH1 = criarElemento('h1', ['resultadoTexto']);
     let resultadoTexto = `Resultados:<br>
-        Freddy: ${contFreddy}<br>
-        Bonnie: ${contBonnie}<br>
-        Chica: ${contChica}<br>
-        Foxy: ${contFoxy}`;
 
-    resultadoDiv.innerHTML = resultadoTexto;
+        Freddy: ${freddy}<br>
+        Bonnie: ${bonnie}<br>
+        Chica: ${chica}<br>
+        Foxy: ${foxy}`;
+
+    resultadoH1.innerHTML = resultadoTexto;
     quizContainer.appendChild(resultadoDiv);
+    resultadoDiv.appendChild(resultadoH1)
 }
 
 function Maior() {
@@ -135,7 +145,7 @@ function Maior() {
 function redirecionamento() {
     let pagina = Maior();
     setTimeout(() => {
-        window.location.href = pagina + ".html";  // Redireciona para a página de personagem
+        window.location.href = pagina + ".html";
     }, 5000);
 }
 
