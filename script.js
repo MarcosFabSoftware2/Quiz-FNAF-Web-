@@ -2,7 +2,6 @@ let contFreddy = 0;
 let contBonnie = 0;
 let contChica = 0;
 let contFoxy = 0;
-
 let totalRespostas = 0;
 let indiceAtual = 0;
 
@@ -64,7 +63,6 @@ function gerarQuiz(quizData) {
         } else {
             contagem()
             resultado();
-            exibirResultado();
             redirecionamento();
         }
     });
@@ -102,45 +100,30 @@ function resultado() {
     localStorage.setItem("foxy", percFoxy);
 }
 
-function exibirResultado() {
-    let quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = '';
-    
-    let freddy = localStorage.getItem("freddy")
-    let bonnie = localStorage.getItem("bonnie")
-    let chica = localStorage.getItem("chica")
-    let foxy = localStorage.getItem("foxy")
-
-    let resultadoDiv = criarElemento('div', ['resultado']);
-    let resultadoH1 = criarElemento('h1', ['resultadoTexto']);
-    let resultadoTexto = `Resultados:<br>
-
-        Freddy: ${freddy}<br>
-        Bonnie: ${bonnie}<br>
-        Chica: ${chica}<br>
-        Foxy: ${foxy}`;
-
-    resultadoH1.innerHTML = resultadoTexto;
-    quizContainer.appendChild(resultadoDiv);
-    resultadoDiv.appendChild(resultadoH1)
-}
-
 function Maior() {
     let maior = Math.max(contFreddy, contBonnie, contChica, contFoxy);
-    let pagina;
+    let paginas = [];
 
     if (contFreddy === maior) {
-        pagina = "freddy";
-    } else if (contBonnie === maior) {
-        pagina = "bonnie";
-    } else if (contChica === maior) {
-        pagina = "chica";
-    } else if (contFoxy === maior) {
-        pagina = "foxy";
+        paginas.push("freddy");
     }
-    
-    return pagina;
+    if (contBonnie === maior) {
+        paginas.push("bonnie");
+    }
+    if (contChica === maior) {
+        paginas.push("chica");
+    }
+    if (contFoxy === maior) {
+        paginas.push("foxy");
+    }
+
+    if (paginas.length > 1) {
+        return "goldenFreddy";
+    }
+
+    return paginas[0];
 }
+
 
 function redirecionamento() {
     let pagina = Maior();
