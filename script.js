@@ -30,23 +30,28 @@ function gerarQuiz(quizData) {
     let container1 = criarElemento('div', ['container1']);
     let containerRespostas = criarElemento('div', ['containerRespostas']);
     let pergunta = criarElemento('h2', [], {});
+    
+    // Aqui, a característica é usada como texto da pergunta
     pergunta.textContent = item.pergunta;
 
     let container2 = criarElemento('div', ['container2']);
 
     item.respostas.forEach(resposta => {
         let label = criarElemento('label');
-        let input = criarElemento('input', [], { type: 'radio', name: `pergunta${indiceAtual + 1}`, value: resposta.toLowerCase() });
-        let divBox = criarElemento('div', ['front-end', 'box', resposta.toLowerCase()]);
-        let h2Texto = criarElemento('h2', [`${resposta.toLowerCase()}Texto`], {});
-        h2Texto.textContent = resposta;
+        let input = criarElemento('input', [], { type: 'radio', name: `pergunta${indiceAtual + 1}`, value: resposta.animatronico.toLowerCase() });
+        let divBox = criarElemento('div', ['front-end', 'box', resposta.animatronico.toLowerCase()]);
+        let h2Texto = criarElemento('h2', [`${resposta.animatronico.toLowerCase()}Texto`], {});
+        
+        // A característica é exibida como o texto da resposta
+        h2Texto.textContent = resposta.caracteristica;
 
         label.appendChild(input);
         label.appendChild(divBox);
         label.appendChild(h2Texto);
         container2.appendChild(label);
     });
-    container1.appendChild(containerRespostas)
+
+    container1.appendChild(containerRespostas);
     containerRespostas.appendChild(pergunta);
     containerRespostas.appendChild(container2);
     quizContainer.appendChild(containerRespostas);
@@ -75,6 +80,7 @@ function contagem() {
     radios.forEach(element => {
         if (element.checked) {
             totalRespostas++;
+            // Puxar o nome do animatrônico para contar as respostas
             if (element.value === "freddy") {
                 contFreddy++;
             } else if (element.value === "bonnie") {
@@ -123,7 +129,6 @@ function Maior() {
 
     return paginas[0];
 }
-
 
 function redirecionamento() {
     let pagina = Maior();
