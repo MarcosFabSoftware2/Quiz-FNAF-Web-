@@ -1,42 +1,92 @@
 [
     {
         "pergunta": "Qual a cor do seu animatrônico favorito?",
-        "respostas": ["Bonnie", "Foxy", "Freddy", "Chica"]
+        "respostas": [
+            { "animatronico": "Bonnie", "caracteristica": "Roxo" },
+            { "animatronico": "Foxy", "caracteristica": "Vermelho" },
+            { "animatronico": "Freddy", "caracteristica": "Amarelo" },
+            { "animatronico": "Chica", "caracteristica": "Laranja" }
+        ]
     },
     {
         "pergunta": "Qual é a habilidade do seu animatrônico favorito?",
-        "respostas": ["Chica", "Freddy", "Bonnie", "Foxy"]
+        "respostas": [
+            { "animatronico": "Chica", "caracteristica": "Movimentação rápida" },
+            { "animatronico": "Freddy", "caracteristica": "Voz encantadora" },
+            { "animatronico": "Bonnie", "caracteristica": "Toque elétrico" },
+            { "animatronico": "Foxy", "caracteristica": "Agressividade" }
+        ]
     },
     {
         "pergunta": "Qual é o seu acessório favorito?",
-        "respostas": ["Foxy", "Freddy", "Bonnie", "Chica"]
+        "respostas": [
+            { "animatronico": "Foxy", "caracteristica": "Gancho" },
+            { "animatronico": "Freddy", "caracteristica": "Microfone" },
+            { "animatronico": "Bonnie", "caracteristica": "Guitarra" },
+            { "animatronico": "Chica", "caracteristica": "Bolo" }
+        ]
     },
     {
         "pergunta": "Qual é o seu lugar favorito no restaurante?",
-        "respostas": ["Freddy", "Chica", "Bonnie", "Foxy"]
+        "respostas": [
+            { "animatronico": "Freddy", "caracteristica": "Palco" },
+            { "animatronico": "Chica", "caracteristica": "Cozinha" },
+            { "animatronico": "Bonnie", "caracteristica": "Sala de máquinas" },
+            { "animatronico": "Foxy", "caracteristica": "Cenário de pirata" }
+        ]
     },
     {
         "pergunta": "Qual é a sua expressão favorita?",
-        "respostas": ["Bonnie", "Foxy", "Freddy", "Chica"]
+        "respostas": [
+            { "animatronico": "Bonnie", "caracteristica": "Sorriso largo" },
+            { "animatronico": "Foxy", "caracteristica": "Feroz" },
+            { "animatronico": "Freddy", "caracteristica": "Sorriso amigável" },
+            { "animatronico": "Chica", "caracteristica": "Olhar assustador" }
+        ]
     },
     {
         "pergunta": "Qual é o seu comportamento favorito?",
-        "respostas": ["Chica", "Freddy", "Bonnie", "Foxy"]
+        "respostas": [
+            { "animatronico": "Chica", "caracteristica": "Curiosa e amigável" },
+            { "animatronico": "Freddy", "caracteristica": "Calmo e sociável" },
+            { "animatronico": "Bonnie", "caracteristica": "Sempre em movimento" },
+            { "animatronico": "Foxy", "caracteristica": "Agitado e imprevisível" }
+        ]
     },
     {
         "pergunta": "Qual é o seu momento favorito?",
-        "respostas": ["Foxy", "Bonnie", "Freddy", "Chica"]
+        "respostas": [
+            { "animatronico": "Foxy", "caracteristica": "Quando sai da caverna" },
+            { "animatronico": "Bonnie", "caracteristica": "Quando toca a guitarra" },
+            { "animatronico": "Freddy", "caracteristica": "Quando canta para as crianças" },
+            { "animatronico": "Chica", "caracteristica": "Quando serve o bolo" }
+        ]
     },
     {
         "pergunta": "Qual é a sua comida favorita?",
-        "respostas": ["Chica", "Freddy", "Bonnie", "Foxy"]
+        "respostas": [
+            { "animatronico": "Chica", "caracteristica": "Bolo" },
+            { "animatronico": "Freddy", "caracteristica": "Pizza" },
+            { "animatronico": "Bonnie", "caracteristica": "Carne" },
+            { "animatronico": "Foxy", "caracteristica": "Frutos do mar" }
+        ]
     },
     {
         "pergunta": "Qual é o seu medo?",
-        "respostas": ["Bonnie", "Chica", "Freddy", "Foxy"]
+        "respostas": [
+            { "animatronico": "Bonnie", "caracteristica": "Escuro" },
+            { "animatronico": "Chica", "caracteristica": "Ser ignorada" },
+            { "animatronico": "Freddy", "caracteristica": "Ficar sem voz" },
+            { "animatronico": "Foxy", "caracteristica": "Ser preso" }
+        ]
     },
     {
         "pergunta": "Qual é o seu tipo de música favorita?",
-        "respostas": ["Chica", "Foxy", "Freddy", "Bonnie"]
+        "respostas": [
+            { "animatronico": "Chica", "caracteristica": "Música alegre" },
+            { "animatronico": "Foxy", "caracteristica": "Rock" },
+            { "animatronico": "Freddy", "caracteristica": "Música clássica" },
+            { "animatronico": "Bonnie", "caracteristica": "Blues" }
+        ]
     }
 ]
